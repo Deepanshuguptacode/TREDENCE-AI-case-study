@@ -184,10 +184,10 @@ You should see healthy, non-zero gradient norms for both the weights and the `ga
 
 | Finding                    | Detail                                                                                          |
 | :------------------------- | :---------------------------------------------------------------------------------------------- |
-| ✅ **Pruning during training** | The gates successfully push irrelevant weights to zero within just 30 epochs.              |
-| ✅ **L1 works as intended**    | The bimodal distribution proves we are getting exact zeros, not just small weights.        |
-| ✅ **Highly tunable**          | Tweaking $\lambda$ gives you direct control over the size-vs-accuracy trade-off.           |
-| ⚠️ **One limitation**         | A flat feed-forward network is never going to set records on CIFAR-10. It hits a ceiling around 58%. Applying this to a CNN architecture would yield much better baseline accuracy. |
+| **Pruning during training** | The gates successfully push irrelevant weights to zero within just 30 epochs.              |
+| **L1 works as intended**    | The bimodal distribution proves we are getting exact zeros, not just small weights.        |
+| **Highly tunable**          | Tweaking $\lambda$ gives you direct control over the size-vs-accuracy trade-off.           |
+| **One limitation**         | A flat feed-forward network is never going to set records on CIFAR-10. It hits a ceiling around 58%. Applying this to a CNN architecture would yield much better baseline accuracy. |
 
 Ultimately, this is a much cleaner, differentiable way to compress a network compared to hacky post-training heuristics like magnitude pruning. The model figures out what matters organically.
 
